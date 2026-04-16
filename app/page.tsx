@@ -1,5 +1,11 @@
 "use client";
 
+import Sidebar from "./components/sidebar";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <div>Hello, Next.js!</div>
+    </div>
+  );
 }

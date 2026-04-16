@@ -33,11 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased nb-page-offset`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
           <Sidebar />
-          {children}
+          <main className="nb-main-content">{children}</main>
         </ThemeProvider>
       </body>
     </html>

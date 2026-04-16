@@ -7,7 +7,7 @@ import { useTheme } from "../context/theme-context";
 
 const navLinks = [
   {
-    label: "home",
+    label: "About me",
     href: "/",
     icon: (
       <svg
@@ -24,7 +24,7 @@ const navLinks = [
     ),
   },
   {
-    label: "skills",
+    label: "Skills",
     href: "/skills",
     icon: (
       <svg
@@ -40,7 +40,7 @@ const navLinks = [
     ),
   },
   {
-    label: "projects",
+    label: "Projects",
     href: "/projects",
     icon: (
       <svg
@@ -58,7 +58,7 @@ const navLinks = [
     ),
   },
   {
-    label: "blog",
+    label: "Blog",
     href: "/blog",
     icon: (
       <svg
@@ -75,7 +75,7 @@ const navLinks = [
     ),
   },
   {
-    label: "contact",
+    label: "Contact",
     href: "/contact",
     icon: (
       <svg
@@ -293,7 +293,12 @@ export default function Sidebar() {
         .nb-toggle:hover { background: var(--nb-hover-bg); color: var(--nb-text); transform: translateX(2px); }
         .nb-toggle:active { transform: scale(0.97); }
 
-        .nb-page-offset { margin-left: 220px; }
+        // .nb-page-offset { margin-left: 220px; }
+        .nb-main-content {
+        margin-left: 250px;
+        min-height: 100vh;
+        width: calc(100% - 250px);
+        }
 
         /* Mobile*/
         @media (max-width: 900px) {
@@ -304,6 +309,11 @@ export default function Sidebar() {
             display: flex !important;
             position: fixed; top: 14px; right: 14px; z-index: 60;
           }
+
+           .nb-main-content {
+            margin-left: 0;
+            width: 100%;
+          }
         }
 
         .nb-hamburger {
@@ -311,7 +321,7 @@ export default function Sidebar() {
           flex-direction: column; gap: 4px;
           background: var(--nb-bg);
           border: 0.5px solid var(--nb-border);
-          border-radius: 8px;
+          border-radius: 4px;
           padding: 8px;
           cursor: pointer;
         }
